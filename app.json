@@ -1,7 +1,6 @@
 {
   "name": "Man-Userbot",
   "description": "[Man-Userbot] userbot Telegram modular yang berjalan pada Python 3.9+",
-  "stack": "container",
   "env": {
     "API_KEY": {
       "description": "Dapatkan API KEY di web my.telegram.org Masukan yg APP ID Telegram",
@@ -37,12 +36,14 @@
     }
   ],
   "buildpacks": [
-    {
-      "url": "heroku/python"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-    }
+      {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
+      {"url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git"},
+      {"url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"},
+      {"url": "https://github.com/rking32/heroku-buildpack-google-chrome"},
+      {"url": "https://github.com/rking32/heroku-buildpack-chromedriver"},
+      {"url": "https://github.com/heroku/heroku-buildpack-apt.git"},
+      {"url": "https://github.com/subinps/heroku-buildpack-nodejs"},
+      {"url": "heroku/python"}
   ],
   "formation": {
     "worker": {
